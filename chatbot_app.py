@@ -1,4 +1,14 @@
 # chatbot_app.py
+import subprocess
+import sys
+
+# Failsafe install of nltk
+try:
+    import nltk
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "nltk"])
+    import nltk
+
 
 import os
 import ssl
